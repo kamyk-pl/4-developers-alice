@@ -1,0 +1,36 @@
+extends layout.pug
+
+block vars
+  - var title = 'model-viewer-import'
+  - var transition= "fade-in"
+
+block title
+        | model viewer import
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape data-line-numbers="4-5" )
+               |
+               | &lt;html lang=&quot;en&quot;&gt;
+               | &lt;head&gt;
+               |     &lt;title&gt;Model Viewer&lt;/title&gt;
+               |     &lt;script type=&quot;module&quot; src=&quot;https://unpkg.com/@google/model-viewer/
+               |                                           dist/model-viewer.min.js&quot;&gt;&lt;/script&gt;
+               |     &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+               | &lt;/head&gt;
+               | &lt;body&gt;
+               | &lt;div id=&quot;info&quot;&gt;
+               |     &lt;p&gt;Model Viewer&lt;/p&gt;
+               |     &lt;a href=&quot;/&quot;&gt;Back&lt;/a&gt;
+               | &lt;/div&gt;
+               | &lt;div style=&quot;width: 800px; height: 600px&quot;&gt;
+               |     &lt;model-viewer src=&quot;/models/dodo/scene.gltf&quot;
+               |                   alt=&quot;A 3D model of dodo bird&quot;
+               |                   autoplay auto-rotate camera-controls
+               |                   ar ar-scale=&quot;auto&quot;
+               |                   ar-modes=&quot;webxr scene-viewer quick-look&quot;
+               |                   style=&quot;width: 100%; height: 100%&quot; ;
+               |     &gt;
+               |     &lt;/model-viewer&gt;
+               |
+

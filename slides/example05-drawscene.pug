@@ -1,0 +1,35 @@
+extends layout.pug
+
+block vars
+  - var title = 'use-controler-position'
+
+block title
+        | Use images
+block content
+         section
+            pre
+              code.smaller-code(data-trim data-noescape data-line-numbers="19")
+               |
+               |         function drawScene() {
+               |              const materials = [
+               |                new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+               |                                                               .load('res/pers.png')}),
+               |                new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+               |                                                               .load('res/dev.png')}),
+               |                new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+               |                                                               .load('res/4dev.png')}),
+               |                new THREE.MeshBasicMaterial({color: 0x00ff00}),
+               |                new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+               |                                                               .load('res/elo.png')}),
+               |                new THREE.MeshBasicMaterial({color: 0x00ffff}),
+               |              ];
+               |
+               |              const cube = new THREE.Mesh(
+               |                              new THREE.BoxBufferGeometry(0.05, 0.05, 0.05)
+               |                                , materials);
+               |              cube.position.set(0, 0, -0.3).applyMatrix4(controller.matrixWorld);
+               |              cubes.push(cube);
+               |              scene.add(cube);
+               |          }
+               |
+               |

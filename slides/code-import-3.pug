@@ -1,0 +1,26 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'code-calling-function'
+  - var transition= "fade-in slide"
+
+block title
+        | calling function
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="8-9")
+               |
+               |     import * as THREE from 'three';
+               |     import {ARButton}
+               |              from './three/examples
+               |                           /jsm/webxr/ARButton.js';
+               |
+               |     let camera, scene, renderer;
+               |
+               |     init();
+               |     animate();
+               |
+               |
+               |
+

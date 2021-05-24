@@ -1,0 +1,34 @@
+extends layout.pug
+
+block vars
+  - var title = 'add-light'
+
+block title
+        | add light
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape data-line-numbers="15-17" )
+               |
+               | function init() {
+               |  const container = document.createElement('div');
+               |  document.body.appendChild(container);
+               |  scene = new THREE.Scene();
+               |  camera = new THREE.PerspectiveCamera(70, window.innerWidth
+               |                                / window.innerHeight, 0.01, 20);
+               |
+               |  renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+               |  renderer.setPixelRatio(window.devicePixelRatio);
+               |  renderer.setSize(window.innerWidth, window.innerHeight);
+               |  renderer.xr.enabled = true;
+               |  container.appendChild(renderer.domElement);
+               |  document.body.appendChild(ARButton.createButton(renderer, {}));
+               |
+               |  const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
+               |  light.position.set(0.5, 1, 0.25);
+               |  scene.add(light);
+               |
+               |  drawScene();
+               |
+               | ...
+               |

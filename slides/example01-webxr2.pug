@@ -1,0 +1,36 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'code'
+
+block title
+        | Request AR session
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape)
+               |
+               |
+               |      function onButtonClicked() {
+               |        if (!xrSession) {
+               |            navigator.xr.requestSession('immersive-ar', {})
+               |               .then(onSessionStarted, () => {
+               |                    alert("Failed to start immersive AR session.");
+               |                    console.error(ex.message);
+               |            });
+               |        }
+               |      }
+               |      function onSessionStarted(session) {
+               |        xrSession = session;
+               |        session.addEventListener('end', onSessionEnded);
+               |        let canvas = document.createElement('canvas');
+               |        gl = canvas.getContext('webgl', {
+               |            xrCompatible: true
+               |        });
+               |        session.updateRenderState({baseLayer: new XRWebGLLayer(session,gl)});
+               |        session.requestReferenceSpace('local').then((refSpace) => {
+               |            xrRefSpace = refSpace;
+               |            session.requestAnimationFrame(onXRFrame);
+               |        });
+               |      }
+               |

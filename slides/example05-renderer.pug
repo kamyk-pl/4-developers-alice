@@ -1,0 +1,30 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'code'
+
+block title
+        | Code render
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="2-13")
+               |
+               |     function render() {
+               |        cubes.forEach((c, i) => {
+               |          if (i % 3 == 0) {
+               |              c.rotation.x =
+               |                     c.rotation.x - Math.PI / 300
+               |          } else if (i % 3 == 1) {
+               |              c.rotation.y =
+               |                     c.rotation.y - Math.PI / 300
+               |          } else if (i % 3 == 2) {
+               |              c.rotation.z =
+               |                     c.rotation.z - Math.PI / 300
+               |          }
+               |       });
+               |
+               |       renderer.render(scene, camera);
+               |      }
+               |
+               |

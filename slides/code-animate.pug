@@ -1,0 +1,17 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'code'
+
+block title
+        | Code animate
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="1-3")
+               |
+               | function animate() {
+               |    renderer.setAnimationLoop(render);
+               | }
+               |
+               |

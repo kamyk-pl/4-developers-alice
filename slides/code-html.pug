@@ -1,0 +1,18 @@
+extends layout-flex.pug
+
+block vars
+    - var title = 'html'
+
+block title
+        | Code html
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="1-20")
+               |
+               | &lt;div id=&quot;info&quot;&gt;
+               |     &lt;p&gt;My first Three.js AR example&lt;/p&gt;
+               |     &lt;a href=&quot;/&quot;&gt;Back&lt;/a&gt;
+               | &lt;/div&gt;
+               |
+               |

@@ -1,0 +1,34 @@
+extends layout.pug
+
+block vars
+  - var title = 'request hit-test'
+  - var transition= "fade-in"
+
+block title
+        | request hit-test
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape data-line-numbers="3-4" )
+               |
+               | function init() {
+               |  ...
+               |  document.body.appendChild(ARButton.createButton(renderer,
+               |                                         {requiredFeatures: ['hit-test']}));
+               |  ...
+               |  clock = new THREE.Clock();
+               |
+               |  reticle = new THREE.Mesh(
+               |       new THREE.RingGeometry(0.15, 0.2, 32).rotateX(-Math.PI / 2),
+               |       new THREE.MeshBasicMaterial()
+               |   );
+               |  reticle.matrixAutoUpdate = false;
+               |  reticle.visible = false;
+               |  scene.add(reticle);
+               |
+               |  function onSelect() {
+               |        if(reticle.visible){
+               |              drawScene();
+               |        }
+               |   }
+               |  ...

@@ -1,0 +1,17 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'code'
+
+block title
+        | Code render
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="1-3")
+               |
+               |     function render() {
+               |          renderer.render(scene, camera);
+               |      }
+               |
+               |

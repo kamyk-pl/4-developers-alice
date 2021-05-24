@@ -1,0 +1,32 @@
+extends layout.pug
+
+block vars
+    - var title = 'Lets-try'
+
+block title
+        | Code overview
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="1-20")
+               |
+               | import ...
+               |
+               | let camera, scene, renderer;
+               |
+               | init();
+               | animate();
+               |
+               | function init() {
+               |  ...
+               |  drawScene()
+               |  ...
+               | }
+               |
+               | function animate() {...}
+               |
+               | function render() {...}
+               |
+               | function drawScene() {...}
+               |
+               |

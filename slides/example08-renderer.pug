@@ -1,0 +1,21 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'mixer-update'
+
+block title
+        | mixer update
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="2-4")
+               |
+               |     function render() {
+               |        if (mixer) {
+               |             mixer.update(clock.getDelta());
+               |         }
+               |
+               |         renderer.render(scene, camera);
+               |      }
+               |
+               |

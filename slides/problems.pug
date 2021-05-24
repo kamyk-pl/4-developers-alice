@@ -1,0 +1,24 @@
+extends layout.pug
+
+block vars
+  - var title = 'challenges-lack'
+
+block title
+        | Challenges
+block content
+        div.flex
+            ul
+                li.fragment
+                    p
+                       | lack of 3D models
+                    div.fragment
+                           a(href="https://poly.google.com/" target="_blank" style="text-decoration: line-through;") Poly
+                           |, &nbsp;
+                           a(href="https://sketchfab.com/" target="_blank") SketchFab
+                li.fragment
+                    p
+                        | difficult editing of 3D models
+            img(src="img/1book12.jpg" alt="challanges" style="max-height: 470px")
+
+
+

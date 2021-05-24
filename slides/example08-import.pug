@@ -1,0 +1,28 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'mixer-clock'
+
+block title
+        | mixer and clock
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="9")
+               |
+               |     import * as THREE from 'three';
+               |     import {ARButton}
+               |              from './three/examples
+               |                         /jsm/webxr/ARButton.js';
+               |
+               |     import {GLTFLoader} from './three/examples/
+               |                        /jsm/loaders/GLTFLoader.js';
+               |
+               |     let camera, scene, renderer, controller, mixer, clock;
+               |
+               |
+               |     init();
+               |     animate();
+               |
+               |
+               |

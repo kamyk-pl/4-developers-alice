@@ -1,0 +1,27 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'import'
+  - var transition= "fade-in"
+
+
+block title
+        | import
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="1-4")
+               |
+               |     import * as THREE from 'three';
+               |     import {ARButton}
+               |              from './three/examples
+               |                           /jsm/webxr/ARButton.js';
+               |
+               |     let camera, scene, renderer;
+               |
+               |     init();
+               |     animate();
+               |
+               |
+               |
+

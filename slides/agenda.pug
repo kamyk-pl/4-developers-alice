@@ -1,0 +1,14 @@
+extends layout.pug
+
+block vars
+  -var title = 'agenda'
+
+block title
+        | Agenda
+block content
+        img(src="img/1book9.jpg" style="display: block; margin: 0 auto;" alt="agenda")
+        ul
+            li.fragment.hideme Theory
+            li.fragment(style="text-decoration: line-through;") Theory
+            li.fragment.bold Examples, Examples, Examples
+

@@ -1,0 +1,38 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'requestr-eferenceSpace'
+  - var transition= "fade-in"
+
+block title
+        | request ReferenceSpace
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="5-21")
+               |
+               |     function render(_, frame) {
+               |        if (mixer) {
+               |             mixer.update(clock.getDelta());
+               |         }
+               |        if (frame) {
+               |             const referenceSpace = renderer.xr.getReferenceSpace();
+               |             const session = renderer.xr.getSession();
+               |             if (hitTestSourceRequested === false) {
+               |                 session.requestReferenceSpace('viewer')
+               |                                        .then((referenceSpace) => {
+               |                     session.requestHitTestSource({space: referenceSpace})
+               |                                         .then((source)=> {
+               |                         hitTestSource = source;
+               |                     });
+               |                 });
+               |                 session.addEventListener('end', function () {
+               |                     hitTestSourceRequested = false;
+               |                     hitTestSource = null;
+               |                 });
+               |                 hitTestSourceRequested = true;
+               |             }
+               |            ...
+               |
+               |
+

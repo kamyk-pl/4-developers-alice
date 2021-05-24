@@ -1,39 +1,1521 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Web XR</title>
-    <meta charset="utf-8"/>
-    <meta name="author" content=" "/>
-    <meta name="description" content=" AR  "/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
-    <link href="reveal/reveal.css" rel="stylesheet"/>
-    <link href="reveal/white.css" rel="stylesheet"/>
-    <!--link(href='common/css/common.css', rel='stylesheet')-->
-    <!--link(href='style.css', rel='stylesheet')--><!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="reveal/plugin/highlight/monokai.css" id="highlight-theme"/>
-    <!--script.-->
-    <!--    var link = document.createElement('link');-->
-    <!--    link.rel = 'stylesheet';-->
-    <!--    link.type = 'text/css';-->
-    <!--    link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js-3.8.0/css/print/pdf.css' : 'reveal.js-3.8.0/css/print/paper.css';-->
-    <!--    document.getElementsByTagName('head')[0].appendChild(link);-->
+    <title>Let's invite A(R)lice from Wonderland to our browsers</title>
+    <meta charset="utf-8">
+    <meta name="author" content=" ">
+    <meta name="description" content=" AR  ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="reveal/reveal.css" rel="stylesheet">
+    <link href="reveal/white.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"><!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="css/atom-light.css" id="highlight-theme">
+    <script src="reveal/plugin/highlight/highlight.js"></script>
   </head>
 </html>
 <body>
-  <div class="reveal">
+  <div class="reveal"><span class="card-header"></span><span class="card-footer"></span>
     <div class="slides">
-      <section>
-        <h3>hello1</h3>
+      <section class="center" id="title-0" data-transition="slide">
+        <h2 class="header"></h2>
+        <div style="text-align: left;"><img src="img/1book22.jpg" alt="Let's invite A(R)lice from Wonderland to our browsers">
+          <h2 class="alice">Let's invite<br>A(R)lice from Wonderland<br>to our browsers</h2>
+          <p style="text-align: right; font-size:0.8em; margin-top:50px">Paweł Kamiński<br><a class="flex" href="https://twitter.com/kamyk_pl" style="color:black; justify-content: flex-end"><img src="img/twitter.png" style="background:white; box-shadow:0 0 0; max-width:65px" alt="twitter logo">( kamyk_pl )</a></p>
+        </div>
       </section>
-      <section>
-        <h3>hello2</h3>
+      <section id="about-me-1" data-transition="slide">
+        <h2 class="header">About me</h2>
+        <div>
+          <div class="flex">
+            <ul>
+              <li>Paweł Kamiński</li>
+              <li>10+ around IT</li>
+              <li>before Java Full-Stack...</li>
+              <li>now more JavaScript and Frontends, but not only</li>
+              <li><a class="flex" href="https://twitter.com/kamyk_pl" style="justify-content: flex-start"><img src="img/twitter.png" style="background:white; box-shadow:0 0 0; max-width:40px" alt="twitter logo"><span style="color:black">kamyk_pl</span></a><a class="flex" href="https://pl.linkedin.com/in/kamyk" style="justify-content: flex-start"><img src="img/linkedin.png" style="background:white; box-shadow:0 0 0; max-width:40px" alt="linkedin logo"><span style="color:black">LinkedIn</span></a></li>
+              <li>@iteratec</li>
+            </ul><img src="img/pkaminski.jpg" style="border-radius: 90px;" alt="authors-img">
+          </div>
+        </div>
+      </section>
+      <section id="iteratec-2" data-transition="slide">
+        <h2 class="header"><img src="img/iteratec.png" alt="iteratec logo" style="max-width: 750px;"></h2>
+        <div>
+          <div class="flex column"><img src="img/iteratec-blocks-top.png" alt="iteratec blocks" style="max-width: 750px;align-self: flex-end">
+            <ul class="smaller">
+              <li class="fragment">~400 Employees in 7 locations (Munich, Dusseldorf, Frankfurt, Hamburg, Stuttgart, Vienna,<strong> Wrocław</strong>)</li>
+              <li class="fragment">Project for German clients from Startups to World Wide leaders</li>
+              <li class="fragment">Interesting ownership model</li>
+              <li class="fragment"><a href="https://www.iteratec.com/pl/career/">Of course we are hiring - www.iteratec.com/pl/career/</a></li>
+            </ul><img src="img/iteratec-blocks.png" alt="iteratec blocks" style="max-width: 750px;align-self: flex-start">
+          </div>
+        </div>
+      </section>
+      <section id="agenda-3" data-transition="slide">
+        <h2 class="header">Agenda</h2>
+        <div><img src="img/1book9.jpg" style="display: block; margin: 0 auto;" alt="agenda">
+          <ul>
+            <li class="fragment hideme">Theory</li>
+            <li class="fragment" style="text-decoration: line-through;">Theory</li>
+            <li class="fragment bold">Examples, Examples, Examples</li>
+          </ul>
+        </div>
+      </section>
+      <section class="center" id="glossary-4" data-transition="slide">
+        <h2 class="header">Glossary</h2>
+        <div><img src="img/1book36.jpg" alt="can i use webxr screenshot" style="max-width: 750px;"></div>
+      </section>
+      <section id="glossary-ar-5" data-transition="slide">
+        <h2 class="header"></h2>
+        <div>
+          <h2>AR - Augmented Reality</h2>
+          <ul>
+            <li class="fragment">real world</li>
+            <li class="fragment">extend by computer generated content<img class="abs-images" src="img/ar-example.png" style="max-width:45%; left:15%" alt="headset is required"></li>
+            <li class="fragment">headset or mobile device required<img class="abs-images" src="img/google-glass.png" style="max-width:45%; left:50%" alt="google glass"></li>
+          </ul>
+        </div>
+      </section>
+      <section class="center" id="why-6" data-transition="slide">
+        <h2 class="header">Why</h2>
+        <div><img src="img/1book25.jpg" alt="why" style="max-width: 750px;"></div>
+      </section>
+      <section id="been-there-done-that-vr-7" data-transition="slide">
+        <h2 class="header">Been there done that</h2>
+        <div>
+          <ul class="gridLike">
+            <li class="fragment no-bullet">
+              <p>Pokemon Go</p><img src="img/pokemon-go.png" alt="Pokemon Go">
+            </li>
+            <li class="fragment no-bullet asd tac">
+              <p>Mozzies</p><img src="img/Mozzies.png" alt="Symbian Mozzies"><br><span class="quote">Symbian OS ~ 2003</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="center" id="webxr-8" data-transition="slide">
+        <h2 class="header"></h2>
+        <div><img src="img/webxr-logo.png" alt="web-xr-logo" style="max-width: 750px; background-color:white"></div>
+      </section>
+      <section id="webxr-9" data-transition="slide">
+        <h2 class="header">Web XR</h2>
+        <div>
+          <ul class="smaller">
+            <li class="fragment"> The first proposed standard of &nbsp;<a href="https://www.w3.org/immersive-web/">Immersive Web</a>&nbsp; working group at W3C</li>
+            <li class="fragment">Mission:<br><span class="italics" style="display:inline-block; margin-left:30px">We help bring high-performance Virtual Reality (VR) and Augmented Reality (AR) (collectively known as XR) to the open Web via APIs to interact with XR devices and sensors in browsers.</span></li>
+            <li class="fragment">low level JavaScript API which exposes the VR/AR platform capabilities</li>
+            <li class="fragment">successor of WebVR</li>
+          </ul>
+        </div>
+      </section>
+      <section id="webxr-status-10" data-transition="slide">
+        <h2 class="header"><a href="https://www.w3.org/TR/webxr/">Web XR</a> W3C Status</h2>
+        <div>
+          <ul class="no-bullet">
+            <li class="done"> W3C receives a Submission</li>
+            <li class="done"> W3C publishes a Note</li>
+            <li class="done"> W3C creates a Working Group</li>
+            <li class="current"> W3C publishes a Working Draft</li>
+            <li class="next"> W3C publishes a Candidate Recommendation</li>
+            <li class="next"> W3C publishes a Proposed Recommendation</li>
+            <li class="next"> W3C publishes a Recommendation</li>
+          </ul>
+        </div>
+      </section>
+      <section id="can-i-use-11" data-transition="slide">
+        <h2 class="header">Can I use WebXR</h2>
+        <div><img src="img/can-i-use.jpg" alt="can i use webxr screenshot" style="max-width: 750px;">
+          <p class="small fragment">Status for 2019-10-28</p>
+        </div>
+      </section>
+      <section id="can-i-use-12" data-transition="slide">
+        <h2 class="header">Can I use WebXR</h2>
+        <div><img src="img/can-i-use-2021.jpg" alt="can i use webxr screenshot" style="max-width: 750px;">
+          <p class="small">Status for 2021-05-11</p>
+        </div>
+      </section>
+      <section class="center" id="Lets-try-13" data-transition="slide">
+        <h2 class="header">The best way to explain it is to do it</h2>
+        <div><img src="img/1book8.jpg" alt="why" style="max-width: 750px;"></div>
+      </section>
+      <section class="center" id="disclaimer-14" data-transition="slide">
+        <h2 class="header">Disclaimer</h2>
+        <div><img src="img/1book32.jpg" alt="why" style="max-width: 750px;"></div>
+      </section>
+      <section class="center" id="follow-me-15" data-transition="slide">
+        <h2 class="header">Follow me</h2>
+        <div>
+          <div>
+            <ul class="flex no-bullet">
+              <li class="fragment tac"><a href="">Link to this slide<img src="img/qr.png" alt="qr code with link to this slide" style="max-width: 750px;"></a></li>
+              <li class="fragment tac"><a href="https://kamyk-pl.github.io/4-developers-2021-examples/">kamyk-pl.github.io/4-developers-2021-examples/<img src="img/qr-examples.png" alt="qr code with link to examples" style="max-width: 750px;"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="requirements-16" data-transition="slide">
+        <h2 class="header">WebXR Requirements</h2>
+        <div class="flex-container">
+          <div class="flex"><img src="img/web-xr-ssl.jpg" alt="WebXR Requirements" style="max-width: 250px;"></div>
+        </div>
+      </section>
+      <section id="code-17" data-transition="slide">
+        <h2 class="header">Pure JS AR Example</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/01.html"><img src="img/qr-01example.png" alt="qr code with link to first example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/01.html"><img src="img/1book1.jpg" alt="qr code with link to first example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="code-18" data-transition="slide">
+        <h2 class="header">Request AR session</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape>
+ function initXR() {
+         if (!window.isSecureContext) {
+             alert("AR experience requires https connection")
+         }
+         if (navigator.xr) {
+             xrButton.addEventListener('click', onButtonClicked);
+             navigator.xr.addEventListener('devicechange',
+                                                checkSupportedState);
+             checkSupportedState();
+         }
+     }
+  function checkSupportedState() {
+         navigator.xr.isSessionSupported('immersive-ar')
+            .then((supported) => {
+                 if (supported) {
+                     xrButton.innerHTML = 'Enter AR';
+              } else {
+                     xrButton.innerHTML = 'AR not found';
+                 }
+                 xrButton.disabled = !supported;
+            });
+     }
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-19" data-transition="slide">
+        <h2 class="header">Request AR session</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape>
+
+     function onButtonClicked() {
+       if (!xrSession) {
+           navigator.xr.requestSession('immersive-ar', {})
+              .then(onSessionStarted, () => {
+                   alert("Failed to start immersive AR session.");
+                   console.error(ex.message);
+           });
+       }
+     }
+     function onSessionStarted(session) {
+       xrSession = session;
+       session.addEventListener('end', onSessionEnded);
+       let canvas = document.createElement('canvas');
+       gl = canvas.getContext('webgl', {
+           xrCompatible: true
+       });
+       session.updateRenderState({baseLayer: new XRWebGLLayer(session,gl)});
+       session.requestReferenceSpace('local').then((refSpace) => {
+           xrRefSpace = refSpace;
+           session.requestAnimationFrame(onXRFrame);
+       });
+     }
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-20" data-transition="slide">
+        <h2 class="header">WebGl to draw rectangle</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape>
+const width = session.renderState.baseLayer.framebufferWidth;
+const height = session.renderState.baseLayer.framebufferHeight;
+gl.enable(gl.SCISSOR_TEST);
+gl.bindFramebuffer(gl.FRAMEBUFFER,
+                           session.renderState.baseLayer.framebuffer);
+gl.scissor(width / 4, height / 4, width / 2, height / 2);
+gl.clearColor(0, 255, 0, 0.5);
+gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section class="center" id="glossary-21" data-transition="slide">
+        <h2 class="header"></h2>
+        <div><a href="https://threejs.org/"><img src="img/threejs.png" alt="Three js logo" style="max-width: 750px;"></a></div>
+      </section>
+      <section id="Lets-try-22" data-transition="slide">
+        <h2 class="header">Code overview</h2>
+        <div>
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="1-20">
+import ...
+
+let camera, scene, renderer;
+
+init();
+animate();
+
+function init() {
+ ...
+ drawScene()
+ ...
+}
+
+function animate() {...}
+
+function render() {...}
+
+function drawScene() {...}
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="import-23" data-transition="fade-in">
+        <h2 class="header">import</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="1-4">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                          /jsm/webxr/ARButton.js';
+
+    let camera, scene, renderer;
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-24" data-transition="fade-in slide">
+        <h2 class="header">Three.js global objects</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="6">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                          /jsm/webxr/ARButton.js';
+
+    let camera, scene, renderer;
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-calling-function-25" data-transition="fade-in slide">
+        <h2 class="header">calling function</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="8-9">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                          /jsm/webxr/ARButton.js';
+
+    let camera, scene, renderer;
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-26" data-transition="fade-in">
+        <h2 class="header">initialize scene and camera</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="2-6">
+function init() {
+ const container = document.createElement('div');
+ document.body.appendChild(container);
+ scene = new THREE.Scene();
+ camera = new THREE.PerspectiveCamera(70, window.innerWidth
+                               / window.innerHeight, 0.01, 20);
+
+ renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+ renderer.setPixelRatio(window.devicePixelRatio);
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.xr.enabled = true;
+ container.appendChild(renderer.domElement);
+ document.body.appendChild(ARButton.createButton(renderer, {}));
+
+ drawScene();
+
+ window.addEventListener('resize', ()=> {
+     camera.aspect = window.innerWidth / window.innerHeight;
+     camera.updateProjectionMatrix();
+     renderer.setSize(window.innerWidth, window.innerHeight);
+ });
+}
+              |</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-27" data-transition="fade-in">
+        <h2 class="header">initialize renderer</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="8-14">
+function init() {
+ const container = document.createElement('div');
+ document.body.appendChild(container);
+ scene = new THREE.Scene();
+ camera = new THREE.PerspectiveCamera(70, window.innerWidth
+                               / window.innerHeight, 0.01, 20);
+
+ renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+ renderer.setPixelRatio(window.devicePixelRatio);
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.xr.enabled = true;
+ container.appendChild(renderer.domElement);
+ document.body.appendChild(ARButton.createButton(renderer, {}));
+
+ drawScene();
+
+ window.addEventListener('resize', ()=> {
+     camera.aspect = window.innerWidth / window.innerHeight;
+     camera.updateProjectionMatrix();
+     renderer.setSize(window.innerWidth, window.innerHeight);
+ });
+}
+              |</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-28" data-transition="fade-in">
+        <h2 class="header">call drawScene</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="15">
+function init() {
+ const container = document.createElement('div');
+ document.body.appendChild(container);
+ scene = new THREE.Scene();
+ camera = new THREE.PerspectiveCamera(70, window.innerWidth
+                               / window.innerHeight, 0.01, 20);
+
+ renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+ renderer.setPixelRatio(window.devicePixelRatio);
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.xr.enabled = true;
+ container.appendChild(renderer.domElement);
+ document.body.appendChild(ARButton.createButton(renderer, {}));
+
+ drawScene();
+
+ window.addEventListener('resize', ()=> {
+     camera.aspect = window.innerWidth / window.innerHeight;
+     camera.updateProjectionMatrix();
+     renderer.setSize(window.innerWidth, window.innerHeight);
+ });
+}
+              |</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-29" data-transition="fade-in">
+        <h2 class="header">window resize handler</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="17-21">
+function init() {
+ const container = document.createElement('div');
+ document.body.appendChild(container);
+ scene = new THREE.Scene();
+ camera = new THREE.PerspectiveCamera(70, window.innerWidth
+                               / window.innerHeight, 0.01, 20);
+
+ renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+ renderer.setPixelRatio(window.devicePixelRatio);
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.xr.enabled = true;
+ container.appendChild(renderer.domElement);
+ document.body.appendChild(ARButton.createButton(renderer, {}));
+
+ drawScene();
+
+ window.addEventListener('resize', ()=> {
+     camera.aspect = window.innerWidth / window.innerHeight;
+     camera.updateProjectionMatrix();
+     renderer.setSize(window.innerWidth, window.innerHeight);
+ });
+}
+              |</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-30" data-transition="slide">
+        <h2 class="header">Code animate</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="1-3">
+function animate() {
+   renderer.setAnimationLoop(render);
+}
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-31" data-transition="slide">
+        <h2 class="header">Code render</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="1-3">
+    function render() {
+         renderer.render(scene, camera);
+     }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-32" data-transition="fade-in">
+        <h2 class="header">Code drawScene</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="2-15">
+        function drawScene() {
+             const materials = [
+                 new THREE.MeshBasicMaterial({color: 0xff0000}),
+                 new THREE.MeshBasicMaterial({color: 0x0000ff}),
+                 new THREE.MeshBasicMaterial({color: 0x00ff00}),
+                 new THREE.MeshBasicMaterial({color: 0xff00ff}),
+                 new THREE.MeshBasicMaterial({color: 0x00ffff}),
+                 new THREE.MeshBasicMaterial({color: 0xffff00})
+             ];
+
+
+             const cube = new THREE.Mesh(
+                             new THREE.BoxBufferGeometry(0.05, 0.05, 0.05)
+                               , materials);
+             cube.position.set(0, 0, -0.3);
+             scene.add(cube);
+         }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-33" data-transition="fade-in">
+        <h2 class="header">Code drawScene</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="16">
+        function drawScene() {
+             const materials = [
+                 new THREE.MeshBasicMaterial({color: 0xff0000}),
+                 new THREE.MeshBasicMaterial({color: 0x0000ff}),
+                 new THREE.MeshBasicMaterial({color: 0x00ff00}),
+                 new THREE.MeshBasicMaterial({color: 0xff00ff}),
+                 new THREE.MeshBasicMaterial({color: 0x00ffff}),
+                 new THREE.MeshBasicMaterial({color: 0xffff00})
+             ];
+
+
+             const cube = new THREE.Mesh(
+                             new THREE.BoxBufferGeometry(0.05, 0.05, 0.05)
+                               , materials);
+             cube.position.set(0, 0, -0.3);
+             scene.add(cube);
+         }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="html-34" data-transition="slide">
+        <h2 class="header">Code html</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="1-20">
+&lt;div id=&quot;info&quot;&gt;
+    &lt;p&gt;My first Three.js AR example&lt;/p&gt;
+    &lt;a href=&quot;/&quot;&gt;Back&lt;/a&gt;
+&lt;/div&gt;
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="first-three-js-35" data-transition="slide">
+        <h2 class="header">First Three.js example</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/02.html"><img src="img/qr-02example.png" alt="qr code with link to second example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/02.html"><img src="img/1book2.jpg" alt="link to second example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="add-light-36" data-transition="slide">
+        <h2 class="header">add light</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="15-17">
+function init() {
+ const container = document.createElement('div');
+ document.body.appendChild(container);
+ scene = new THREE.Scene();
+ camera = new THREE.PerspectiveCamera(70, window.innerWidth
+                               / window.innerHeight, 0.01, 20);
+
+ renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+ renderer.setPixelRatio(window.devicePixelRatio);
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.xr.enabled = true;
+ container.appendChild(renderer.domElement);
+ document.body.appendChild(ARButton.createButton(renderer, {}));
+
+ const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
+ light.position.set(0.5, 1, 0.25);
+ scene.add(light);
+
+ drawScene();
+
+...
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="use-images-37" data-transition="slide">
+        <h2 class="header">Use images</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="3-8,10-11">
+        function drawScene() {
+             const materials = [
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/pers.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/dev.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/4dev.png')}),
+               new THREE.MeshBasicMaterial({color: 0x00ff00}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/elo.png')}),
+               new THREE.MeshBasicMaterial({color: 0x00ffff}),
+             ];
+
+             const cube = new THREE.Mesh(
+                             new THREE.BoxBufferGeometry(0.05, 0.05, 0.05)
+                               , materials);
+             cube.position.set(0, 0, -0.3);
+             scene.add(cube);
+         }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="three-js-images-38" data-transition="slide">
+        <h2 class="header">Three.js example with images</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/03.html"><img src="img/qr-03example.png" alt="qr code with link to third example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/03.html"><img src="img/1book3.jpg" alt="link to third example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="add-controller-39" data-transition="slide">
+        <h2 class="header">add controller</h2>
+        <div>
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="6">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                          /jsm/webxr/ARButton.js';
+
+    let camera, scene, renderer, controller;
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="add-onSelect-40" data-transition="slide">
+        <h2 class="header">add onSelect</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="8-10, 12-14">
+function init() {
+ ...
+
+ const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
+ light.position.set(0.5, 1, 0.25);
+ scene.add(light);
+
+ controller = renderer.xr.getController(0);
+ controller.addEventListener('select', onSelect);
+ scene.add(controller);
+
+ function onSelect() {
+       drawScene();
+  }
+
+...
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="use-controler-position-41" data-transition="slide">
+        <h2 class="header">Use images</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="18">
+        function drawScene() {
+             const materials = [
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/pers.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/dev.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/4dev.png')}),
+               new THREE.MeshBasicMaterial({color: 0x00ff00}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/elo.png')}),
+               new THREE.MeshBasicMaterial({color: 0x00ffff}),
+             ];
+
+             const cube = new THREE.Mesh(
+                             new THREE.BoxBufferGeometry(0.05, 0.05, 0.05)
+                               , materials);
+             cube.position.set(0, 0, -0.3).applyMatrix4(controller.matrixWorld);
+             scene.add(cube);
+         }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="three-js-images-42" data-transition="slide">
+        <h2 class="header">Three.js example with interaction</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/04.html"><img src="img/qr-04example.png" alt="qr code with link to fourth example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/04.html"><img src="img/1book5.jpg" alt="link to fourth example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="cubes-array-43" data-transition="slide">
+        <h2 class="header">cubes arrays</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="7">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                          /jsm/webxr/ARButton.js';
+
+    let camera, scene, renderer, controller;
+    const cubes = [];
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="use-controler-position-44" data-transition="slide">
+        <h2 class="header">Use images</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="19">
+        function drawScene() {
+             const materials = [
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/pers.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/dev.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/4dev.png')}),
+               new THREE.MeshBasicMaterial({color: 0x00ff00}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/elo.png')}),
+               new THREE.MeshBasicMaterial({color: 0x00ffff}),
+             ];
+
+             const cube = new THREE.Mesh(
+                             new THREE.BoxBufferGeometry(0.05, 0.05, 0.05)
+                               , materials);
+             cube.position.set(0, 0, -0.3).applyMatrix4(controller.matrixWorld);
+             cubes.push(cube);
+             scene.add(cube);
+         }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="code-45" data-transition="slide">
+        <h2 class="header">Code render</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="2-13">
+    function render() {
+       cubes.forEach((c, i) => {
+         if (i % 3 == 0) {
+             c.rotation.x =
+                    c.rotation.x - Math.PI / 300
+         } else if (i % 3 == 1) {
+             c.rotation.y =
+                    c.rotation.y - Math.PI / 300
+         } else if (i % 3 == 2) {
+             c.rotation.z =
+                    c.rotation.z - Math.PI / 300
+         }
+      });
+
+      renderer.render(scene, camera);
+     }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="three-js-images-46" data-transition="slide">
+        <h2 class="header">Three.js example with animation</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/05.html"><img src="img/qr-05example.png" alt="qr code with link to fifth example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/05.html"><img src="img/1book8.jpg" alt="link to fifth example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="video html-47" data-transition="slide">
+        <h2 class="header">Video html element</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="1-8">
+  &lt;video id=&quot;video&quot;
+         loop
+         muted
+         crossOrigin=&quot;anonymous&quot;
+         playsinline
+         style=&quot;display:none&quot;&gt;
+      &lt;source src=&quot;res/video.mp4&quot;&gt;
+  &lt;/video&gt;
+
+  &lt;div id=&quot;info&quot;&gt;
+      &lt;p&gt;Three.js example with video&lt;/p&gt;
+      &lt;a href=&quot;/&quot;&gt;Back&lt;/a&gt;
+  &lt;/div&gt;
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="use-controler-position-48" data-transition="slide">
+        <h2 class="header">Use video</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="2,3,9">
+        function drawScene() {
+             const video = document.getElementById('video');
+             video.play();
+             const materials = [
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/pers.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/dev.png')}),
+               new THREE.MeshPhongMaterial({map: new THREE.VideoTexture(video)}),
+               new THREE.MeshBasicMaterial({color: 0x00ff00}),
+               new THREE.MeshPhongMaterial({map: new THREE.TextureLoader()
+                                                              .load('res/elo.png')}),
+               new THREE.MeshBasicMaterial({color: 0x00ffff}),
+             ];
+             const cube = new THREE.Mesh(
+                             new THREE.BoxBufferGeometry(0.05, 0.05, 0.05)
+                               , materials);
+             cube.position.set(0, 0, -0.3).applyMatrix4(controller.matrixWorld);
+             cubes.push(cube);
+             scene.add(cube);
+         }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="three-js-images-49" data-transition="slide">
+        <h2 class="header">Three.js example with video</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/06.html"><img src="img/qr-06example.png" alt="qr code with link to sixth example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/06.html"><img src="img/1book9.jpg" alt="link to sixth example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="gltf-loader-import-50" data-transition="slide">
+        <h2 class="header">GLTFLoader import</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="6-7">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                        /jsm/webxr/ARButton.js';
+
+    import {GLTFLoader} from './three/examples/
+                       /jsm/loaders/GLTFLoader.js';
+
+    let camera, scene, renderer, controller;
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="onSelect-51" data-transition="slide">
+        <h2 class="header">onSelect</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="12-14">
+function init() {
+ ...
+
+ const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
+ light.position.set(0.5, 1, 0.25);
+ scene.add(light);
+
+ controller = renderer.xr.getController(0);
+ controller.addEventListener('select', onSelect);
+ scene.add(controller);
+
+ function onSelect() {
+       drawScene();
+  }
+
+...
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="gltf-loader-52" data-transition="fade-in">
+        <h2 class="header">Gltf loader</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="2-3">   function drawScene() {
+      const loader = new GLTFLoader();
+      loader.load('./models/dodo/scene.gltf',
+           (gltf) => {
+               const model = gltf.scene;
+               model.position.set(0, 0, -0.3)
+                                .applyMatrix4(controller.matrixWorld);
+               model.scale.set(0.01, 0.01, 0.01)
+               scene.add(model);
+           },
+           (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+           (e) => console.error(e)
+        );
+ }
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="gltf-loader-success-53" data-transition="fade-in">
+        <h2 class="header">Gltf loader success</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="4-9">   function drawScene() {
+      const loader = new GLTFLoader();
+      loader.load('./models/dodo/scene.gltf',
+           (gltf) => {
+               const model = gltf.scene;
+               model.position.set(0, 0, -0.3)
+                                .applyMatrix4(controller.matrixWorld);
+               model.scale.set(0.01, 0.01, 0.01)
+               scene.add(model);
+           },
+           (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+           (e) => console.error(e)
+        );
+ }
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="gltf-loader-progress-54" data-transition="fade-in">
+        <h2 class="header">Gltf loader progress</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="11">   function drawScene() {
+      const loader = new GLTFLoader();
+      loader.load('./models/dodo/scene.gltf',
+           (gltf) => {
+               const model = gltf.scene;
+               model.position.set(0, 0, -0.3)
+                                .applyMatrix4(controller.matrixWorld);
+               model.scale.set(0.01, 0.01, 0.01)
+               scene.add(model);
+           },
+           (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+           (e) => console.error(e)
+        );
+ }
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="gltf-loader-failure-55" data-transition="fade-in">
+        <h2 class="header">Gltf loader failure</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="12">   function drawScene() {
+      const loader = new GLTFLoader();
+      loader.load('./models/dodo/scene.gltf',
+           (gltf) => {
+               const model = gltf.scene;
+               model.position.set(0, 0, -0.3)
+                                .applyMatrix4(controller.matrixWorld);
+               model.scale.set(0.01, 0.01, 0.01)
+               scene.add(model);
+           },
+           (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+           (e) => console.error(e)
+        );
+ }
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="three-js-model-56" data-transition="slide">
+        <h2 class="header">Three.js model</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/07.html"><img src="img/qr-07example.png" alt="qr code with link to seventh example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/07.html"><img src="img/1book25.jpg" alt="link to seventh example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="mixer-clock-57" data-transition="slide">
+        <h2 class="header">mixer and clock</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="9">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                        /jsm/webxr/ARButton.js';
+
+    import {GLTFLoader} from './three/examples/
+                       /jsm/loaders/GLTFLoader.js';
+
+    let camera, scene, renderer, controller, mixer, clock;
+
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="clock-58" data-transition="slide">
+        <h2 class="header">clock</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="12">
+function init() {
+ ...
+
+ const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
+ light.position.set(0.5, 1, 0.25);
+ scene.add(light);
+
+ controller = renderer.xr.getController(0);
+ controller.addEventListener('select', onSelect);
+ scene.add(controller);
+
+ clock = new THREE.Clock();
+
+ function onSelect() {
+       drawScene();
+  }
+
+...
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="mixer-update-59" data-transition="slide">
+        <h2 class="header">mixer update</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="2-4">
+    function render() {
+       if (mixer) {
+            mixer.update(clock.getDelta());
+        }
+
+        renderer.render(scene, camera);
+     }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="play-animation-60" data-transition="slide">
+        <h2 class="header">play-animation</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="11-13">   function drawScene() {
+      const loader = new GLTFLoader();
+      loader.load('./models/dodo/scene.gltf',
+           (gltf) => {
+               const model = gltf.scene;
+               model.position.set(0, 0, -0.3)
+                                .applyMatrix4(controller.matrixWorld);
+               model.scale.set(0.01, 0.01, 0.01)
+               scene.add(model);
+
+               mixer = new THREE.AnimationMixer(model);
+               const animation = gltf.animations[0];
+               mixer.clipAction(animation).play();
+           },
+           (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+           (e) => console.error(e)
+        );
+ }
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="three-js-model-animation-61" data-transition="slide">
+        <h2 class="header">Three.js model animation</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/08.html"><img src="img/qr-08example.png" alt="qr code with link to eighth example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/08.html"><img src="img/1book27.jpg" alt="link to eighth example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="reticle-62" data-transition="slide">
+        <h2 class="header">reticle</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="11-13">
+    import * as THREE from 'three';
+    import {ARButton}
+             from './three/examples
+                        /jsm/webxr/ARButton.js';
+
+    import {GLTFLoader} from './three/examples/
+                       /jsm/loaders/GLTFLoader.js';
+
+    let camera, scene, renderer, controller, mixer, clock;
+
+    let reticle;
+    let hitTestSource = null;
+    let hitTestSourceRequested = false
+
+    init();
+    animate();
+
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="request hit-test-63" data-transition="fade-in">
+        <h2 class="header">request hit-test</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="3-4">
+function init() {
+ ...
+ document.body.appendChild(ARButton.createButton(renderer,
+                                        {requiredFeatures: ['hit-test']}));
+ ...
+ clock = new THREE.Clock();
+
+ reticle = new THREE.Mesh(
+      new THREE.RingGeometry(0.15, 0.2, 32).rotateX(-Math.PI / 2),
+      new THREE.MeshBasicMaterial()
+  );
+ reticle.matrixAutoUpdate = false;
+ reticle.visible = false;
+ scene.add(reticle);
+
+ function onSelect() {
+       if(reticle.visible){
+             drawScene();
+       }
+  }
+ ...</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="build-rectile-64" data-transition="fade-in">
+        <h2 class="header">build rectile</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="8-14">
+function init() {
+ ...
+ document.body.appendChild(ARButton.createButton(renderer,
+                                        {requiredFeatures: ['hit-test']}));
+ ...
+ clock = new THREE.Clock();
+
+ reticle = new THREE.Mesh(
+      new THREE.RingGeometry(0.15, 0.2, 32).rotateX(-Math.PI / 2),
+      new THREE.MeshBasicMaterial()
+  );
+ reticle.matrixAutoUpdate = false;
+ reticle.visible = false;
+ scene.add(reticle);
+
+ function onSelect() {
+       if(reticle.visible){
+             drawScene();
+       }
+  }
+ ...</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="only-if-reticle.visible-65" data-transition="fade-in">
+        <h2 class="header">only if reticle.visible</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="17-19">
+function init() {
+ ...
+ document.body.appendChild(ARButton.createButton(renderer,
+                                        {requiredFeatures: ['hit-test']}));
+ ...
+ clock = new THREE.Clock();
+
+ reticle = new THREE.Mesh(
+      new THREE.RingGeometry(0.15, 0.2, 32).rotateX(-Math.PI / 2),
+      new THREE.MeshBasicMaterial()
+  );
+ reticle.matrixAutoUpdate = false;
+ reticle.visible = false;
+ scene.add(reticle);
+
+ function onSelect() {
+       if(reticle.visible){
+             drawScene();
+       }
+  }
+ ...</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="requestr-eferenceSpace-66" data-transition="fade-in">
+        <h2 class="header">request ReferenceSpace</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="5-21">
+    function render(_, frame) {
+       if (mixer) {
+            mixer.update(clock.getDelta());
+        }
+       if (frame) {
+            const referenceSpace = renderer.xr.getReferenceSpace();
+            const session = renderer.xr.getSession();
+            if (hitTestSourceRequested === false) {
+                session.requestReferenceSpace('viewer')
+                                       .then((referenceSpace) => {
+                    session.requestHitTestSource({space: referenceSpace})
+                                        .then((source)=> {
+                        hitTestSource = source;
+                    });
+                });
+                session.addEventListener('end', function () {
+                    hitTestSourceRequested = false;
+                    hitTestSource = null;
+                });
+                hitTestSourceRequested = true;
+            }
+           ...
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="reticle-visibility-67" data-transition="fade-in">
+        <h2 class="header">reticle visibility</h2>
+        <div class="flex-container">
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers="3-12">
+    function render(_, frame) {
+           ...
+            if (hitTestSource) {
+                const hitTestResults = frame.getHitTestResults(hitTestSource);
+                if (hitTestResults.length) {
+                    const hit = hitTestResults[0];
+                    reticle.visible = true;
+                    reticle.matrix.fromArray(hit.getPose(referenceSpace)
+                                                           .transform.matrix);
+                } else {
+                    reticle.visible = false;
+                }
+            }
+        }
+        renderer.render(scene, camera);
+     }
+
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="three-js-surface-68" data-transition="slide">
+        <h2 class="header">Three.js surface detection</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/09.html"><img src="img/qr-09example.png" alt="qr code with link to ninth example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/09.html"><img src="img/1book29.jpg" alt="link to ninth example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="model-viewer-69" data-transition="slide">
+        <h2 class="header">Model Viewer</h2>
+        <div class="flex-container"><a href="https://modelviewer.dev/"><img src="img/model-viewer.jpg" alt="Three js logo" style="max-width: 750px;"></a></div>
+      </section>
+      <section id="model-viewer-import-70" data-transition="fade-in">
+        <h2 class="header">model viewer import</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="4-5">
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Model Viewer&lt;/title&gt;
+    &lt;script type=&quot;module&quot; src=&quot;https://unpkg.com/@google/model-viewer/
+                                          dist/model-viewer.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;info&quot;&gt;
+    &lt;p&gt;Model Viewer&lt;/p&gt;
+    &lt;a href=&quot;/&quot;&gt;Back&lt;/a&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 800px; height: 600px&quot;&gt;
+    &lt;model-viewer src=&quot;/models/dodo/scene.gltf&quot;
+                  alt=&quot;A 3D model of dodo bird&quot;
+                  autoplay auto-rotate camera-controls
+                  ar ar-scale=&quot;auto&quot;
+                  ar-modes=&quot;webxr scene-viewer quick-look&quot;
+                  style=&quot;width: 100%; height: 100%&quot; ;
+    &gt;
+    &lt;/model-viewer&gt;
+</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="model-viewer-usage-71" data-transition="fade-in">
+        <h2 class="header">model viewer usage</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="14-21">
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Model Viewer&lt;/title&gt;
+    &lt;script type=&quot;module&quot; src=&quot;https://unpkg.com/@google/model-viewer/
+                                          dist/model-viewer.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;info&quot;&gt;
+    &lt;p&gt;Model Viewer&lt;/p&gt;
+    &lt;a href=&quot;/&quot;&gt;Back&lt;/a&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 800px; height: 600px&quot;&gt;
+    &lt;model-viewer src=&quot;/models/dodo/scene.gltf&quot;
+                  alt=&quot;A 3D model of dodo bird&quot;
+                  autoplay auto-rotate camera-controls
+                  ar ar-scale=&quot;auto&quot;
+                  ar-modes=&quot;webxr scene-viewer quick-look&quot;
+                  style=&quot;width: 100%; height: 100%&quot; ;
+    &gt;
+    &lt;/model-viewer&gt;</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="model-viewer-usage-72" data-transition="slide">
+        <h2 class="header">model viewer usage</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="1-8">
+    &lt;model-viewer src=&quot;models/chair/chair.glb&quot;
+                  autoplay auto-rotate camera-controls
+                  alt=&quot;A 3D model of a chair&quot;
+                  ar ar-scale=&quot;auto&quot;
+                  ar-modes=&quot;webxr scene-viewer quick-look&quot;
+                  style=&quot;width: 100%; height: 100%&quot; ;
+    &gt;
+    &lt;/model-viewer&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="model-viewer-73" data-transition="slide">
+        <h2 class="header">Model Viewer</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/10.html"><img src="img/qr-10example.png" alt="qr code with link to tenth     example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/10.html"><img src="img/1book36.jpg" alt="link to tenth example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="alice-74" data-transition="slide">
+        <h2 class="header">Alice</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/alice.html"><img src="img/qr-alice.png" alt="qr code with link to eleventh  example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/alice.html"><img src="img/1book22.jpg" alt="link to eleventh example"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="vs-native-pros-75" data-transition="slide">
+        <h2 class="header">web vs native apps</h2>
+        <div>
+          <h2>pros</h2>
+          <div class="flex">
+            <ul>
+              <li class="fragment">no installation</li>
+              <li class="fragment">no mobile stores restrictions</li>
+              <li class="fragment">fast implementation (one app all platforms)</li>
+              <li class="fragment">low entry threshold</li>
+              <li class="fragment">instant updates</li>
+            </ul><img src="img/1book31.jpg" alt="vs native" style="max-height: 470px">
+          </div>
+        </div>
+      </section>
+      <section id="vs-native-pros-76" data-transition="slide">
+        <h2 class="header">web vs native apps</h2>
+        <div>
+          <h2>pros</h2>
+          <div class="flex">
+            <ul>
+              <li class="fragment">security</li>
+              <li class="fragment">3d content can be indexed and searched</li>
+              <li class="fragment">extend current websites</li>
+              <li class="fragment">it is our playground with our tools<br>(Dev Tools, Npm, VisualCode, ...)</li>
+            </ul><img src="img/1book30.jpg" alt="vs natuve" style="max-height: 470px">
+          </div>
+        </div>
+      </section>
+      <section id="vs-native-cons-77" data-transition="slide">
+        <h2 class="header">web vs native apps</h2>
+        <div>
+          <h2>cons</h2>
+          <div class="flex">
+            <ul>
+              <li class="fragment">it is not yet production ready</li>
+              <li class="fragment">offline resources</li>
+              <li class="fragment">performance</li>
+              <li class="fragment">web limitation (saving files, offline mode, ...)</li>
+            </ul><img src="img/1book21.jpg" alt="vs native" style="max-height: 470px;">
+          </div>
+        </div>
+      </section>
+      <section id="challenges-lack-78" data-transition="slide">
+        <h2 class="header">Challenges</h2>
+        <div>
+          <div class="flex">
+            <ul>
+              <li class="fragment">
+                <p>lack of 3D models</p>
+                <div class="fragment"><a href="https://poly.google.com/" target="_blank" style="text-decoration: line-through;">Poly</a>, &nbsp;<a href="https://sketchfab.com/" target="_blank">SketchFab</a></div>
+              </li>
+              <li class="fragment">
+                <p>difficult editing of 3D models</p>
+              </li>
+            </ul><img src="img/1book12.jpg" alt="challanges" style="max-height: 470px">
+          </div>
+        </div>
+      </section>
+      <section id="challenges-size-79" data-transition="slide">
+        <h2 class="header">Challenges</h2>
+        <div>
+          <div class="flex">
+            <ul>
+              <li class="fragment">
+                <p>size of models => Dodo weigth ~13MB</p>
+              </li>
+              <li class="fragment">
+                <p>lack of UI guidelines and  good practices</p>
+              </li>
+            </ul><img src="img/1book13.jpg" alt="challanges" style="max-height: 470px">
+          </div>
+        </div>
+      </section>
+      <section class="center" id="play-80" data-transition="slide">
+        <h2 class="header">Try that at home</h2>
+        <div><img src="img/1book28.jpg" alt="why" style="max-width: 750px;"></div>
+      </section>
+      <section id="Chess-81" data-transition="slide">
+        <h2 class="header">Chess</h2>
+        <div class="flex-container">
+          <div>
+            <ul class="flex no-bullet">
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/chess.html"><img src="img/qr-chess.png" alt="qr code with link to twelfth example" style="max-width: 750px;"></a></li>
+              <li><a class="tac" href="https://kamyk-pl.github.io/4-developers-2021-examples/chess.html"><img src="img/1book41.jpg" alt="link to twelfth example"></a></li>
+            </ul>
+          </div>
+        </div>
       </section>
     </div>
   </div>
   <script src="reveal/reveal.js"></script>
   <script>
     Reveal.initialize({
-        // controls: true,
+         controls: false,
         // progress: true,
         history: true,
         center: false,
@@ -42,12 +1524,54 @@
         // transition: "convex",
         // width: "90%",
         // height: 1.0,
-        dependencies: [
-            // Syntax highlight for <code> elements
-            {src: 'reveal/plugin/markdown/markdown.js'},
-            {src: 'reveal/plugin/notes/notes.js', async: true},
-            {src: 'reveal/plugin/highlight/highlight.js', async: true  },
-        ]
+        dependencies: [            ],
+         plugins: [ RevealHighlight ]
+    });
+  </script>
+  <script>
+    Reveal.on('slidechanged', () => {
+    
+        const value = 2 + Math.floor(Math.random() * 11);
+        const color = 1 + Math.floor(Math.random() * 4);
+    
+        function getCard(value) {
+            switch (value) {
+                case 13:
+                    return 'A';
+                case 12:
+                    return 'K';
+                case 11:
+                    return 'Q';
+                case 10:
+                    return 'J';
+                default:
+                    return value
+            }
+        }
+    
+        function getSuite(suite) {
+            switch (suite) {
+                case 1:
+                    return 'spades';
+                case 2:
+                    return 'clubs';
+                case 3:
+                    return 'diamonds';
+                case 4:
+                    return 'hearts';
+            }
+        }
+    
+        const header = document.querySelector(".card-header")
+        header.innerText = getCard(value);
+        header.classList.remove('spades','clubs','diamonds','hearts')
+        header.classList.add(getSuite(color))
+    
+        const footer = document.querySelector(".card-footer")
+        footer.innerText = getCard(value);
+        footer.classList.remove('spades','clubs','diamonds','hearts')
+        footer.classList.add(getSuite(color))
+    
     });
   </script>
 </body>

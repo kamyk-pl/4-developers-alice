@@ -1,0 +1,29 @@
+extends layout.pug
+
+block vars
+  - var title = 'add-onSelect'
+
+block title
+        | add onSelect
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape data-line-numbers="8-10, 12-14" )
+               |
+               | function init() {
+               |  ...
+               |
+               |  const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
+               |  light.position.set(0.5, 1, 0.25);
+               |  scene.add(light);
+               |
+               |  controller = renderer.xr.getController(0);
+               |  controller.addEventListener('select', onSelect);
+               |  scene.add(controller);
+               |
+               |  function onSelect() {
+               |        drawScene();
+               |   }
+               |
+               | ...
+               |

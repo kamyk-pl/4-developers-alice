@@ -1,0 +1,23 @@
+extends layout.pug
+
+block vars
+  - var title = 'model-viewer-usage'
+
+block title
+        | model viewer usage
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape data-line-numbers="1-8" )
+               |
+               |     &lt;model-viewer src=&quot;models/chair/chair.glb&quot;
+               |                   autoplay auto-rotate camera-controls
+               |                   alt=&quot;A 3D model of a chair&quot;
+               |                   ar ar-scale=&quot;auto&quot;
+               |                   ar-modes=&quot;webxr scene-viewer quick-look&quot;
+               |                   style=&quot;width: 100%; height: 100%&quot; ;
+               |     &gt;
+               |     &lt;/model-viewer&gt;
+               | &lt;/div&gt;
+               | &lt;/body&gt;
+               | &lt;/html&gt;

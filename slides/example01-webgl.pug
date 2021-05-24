@@ -1,0 +1,21 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'code'
+
+block title
+        | WebGl to draw rectangle
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape)
+               |
+               | const width = session.renderState.baseLayer.framebufferWidth;
+               | const height = session.renderState.baseLayer.framebufferHeight;
+               | gl.enable(gl.SCISSOR_TEST);
+               | gl.bindFramebuffer(gl.FRAMEBUFFER,
+               |                            session.renderState.baseLayer.framebuffer);
+               | gl.scissor(width / 4, height / 4, width / 2, height / 2);
+               | gl.clearColor(0, 255, 0, 0.5);
+               | gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+               |

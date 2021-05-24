@@ -1,0 +1,25 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'cubes-array'
+
+block title
+        | cubes arrays
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="7")
+               |
+               |     import * as THREE from 'three';
+               |     import {ARButton}
+               |              from './three/examples
+               |                           /jsm/webxr/ARButton.js';
+               |
+               |     let camera, scene, renderer, controller;
+               |     const cubes = [];
+               |
+               |     init();
+               |     animate();
+               |
+               |
+               |

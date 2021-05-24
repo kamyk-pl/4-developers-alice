@@ -1,0 +1,27 @@
+extends layout.pug
+
+block vars
+  - var title = 'iteratec'
+
+block title
+        img(src="img/iteratec.png" alt="iteratec logo" style="max-width: 750px;")
+block content
+        div.flex.column
+            img(src="img/iteratec-blocks-top.png" alt="iteratec blocks" style="max-width: 750px;align-self: flex-end")
+            ul.smaller
+                li.fragment
+                    | ~400 Employees in 7 locations (Munich, Dusseldorf, Frankfurt, Hamburg, Stuttgart, Vienna,
+                    strong  Wrocław
+                    | )
+                li.fragment
+                    | Project for German clients from Startups to World Wide leaders
+                li.fragment
+                    | Interesting ownership model
+                li.fragment
+                    a(href="https://www.iteratec.com/pl/career/") Of course we are hiring - www.iteratec.com/pl/career/
+            img(src="img/iteratec-blocks.png" alt="iteratec blocks" style="max-width: 750px;align-self: flex-start")
+
+
+
+
+

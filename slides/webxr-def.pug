@@ -1,0 +1,19 @@
+extends layout.pug
+
+block vars
+  - var title = 'webxr'
+
+block title
+        | Web XR
+block content
+        ul.smaller
+            li.fragment  The first proposed standard of &nbsp;
+                a(href="https://www.w3.org/immersive-web/")
+                    | Immersive Web
+                | &nbsp; working group at W3C
+            li.fragment Mission:
+                br
+                span.italics(style="display:inline-block; margin-left:30px")
+                    |We help bring high-performance Virtual Reality (VR) and Augmented Reality (AR) (collectively known as XR) to the open Web via APIs to interact with XR devices and sensors in browsers.
+            li.fragment low level JavaScript API which exposes the VR/AR platform capabilities
+            li.fragment successor of WebVR

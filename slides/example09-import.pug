@@ -1,0 +1,31 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'reticle'
+
+block title
+        | reticle
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="11-13")
+               |
+               |     import * as THREE from 'three';
+               |     import {ARButton}
+               |              from './three/examples
+               |                         /jsm/webxr/ARButton.js';
+               |
+               |     import {GLTFLoader} from './three/examples/
+               |                        /jsm/loaders/GLTFLoader.js';
+               |
+               |     let camera, scene, renderer, controller, mixer, clock;
+               |
+               |     let reticle;
+               |     let hitTestSource = null;
+               |     let hitTestSourceRequested = false
+               |
+               |     init();
+               |     animate();
+               |
+               |
+               |

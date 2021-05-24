@@ -1,0 +1,36 @@
+extends layout.pug
+
+block vars
+  - var title = 'code'
+  - var transition= "fade-in"
+
+block title
+        | call drawScene
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape data-line-numbers="15" )
+               |
+               | function init() {
+               |  const container = document.createElement('div');
+               |  document.body.appendChild(container);
+               |  scene = new THREE.Scene();
+               |  camera = new THREE.PerspectiveCamera(70, window.innerWidth
+               |                                / window.innerHeight, 0.01, 20);
+               |
+               |  renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+               |  renderer.setPixelRatio(window.devicePixelRatio);
+               |  renderer.setSize(window.innerWidth, window.innerHeight);
+               |  renderer.xr.enabled = true;
+               |  container.appendChild(renderer.domElement);
+               |  document.body.appendChild(ARButton.createButton(renderer, {}));
+               |
+               |  drawScene();
+               |
+               |  window.addEventListener('resize', ()=> {
+               |      camera.aspect = window.innerWidth / window.innerHeight;
+               |      camera.updateProjectionMatrix();
+               |      renderer.setSize(window.innerWidth, window.innerHeight);
+               |  });
+               | }
+               |               |

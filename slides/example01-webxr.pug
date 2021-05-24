@@ -1,0 +1,59 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'code'
+
+block title
+        | Request AR session
+block content
+         section
+            pre
+             code.smaller-code(data-trim data-noescape)
+               |
+               |  function initXR() {
+               |          if (!window.isSecureContext) {
+               |              alert("AR experience requires https connection")
+               |          }
+               |          if (navigator.xr) {
+               |              xrButton.addEventListener('click', onButtonClicked);
+               |              navigator.xr.addEventListener('devicechange',
+               |                                                 checkSupportedState);
+               |              checkSupportedState();
+               |          }
+               |      }
+               |   function checkSupportedState() {
+               |          navigator.xr.isSessionSupported('immersive-ar')
+               |             .then((supported) => {
+               |                  if (supported) {
+               |                      xrButton.innerHTML = 'Enter AR';
+               |               } else {
+               |                      xrButton.innerHTML = 'AR not found';
+               |                  }
+               |                  xrButton.disabled = !supported;
+               |             });
+               |      }
+               |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+extends layout.pug
+
+block vars
+  - var title = 'gltf-loader-progress'
+  - var transition= "fade-in"
+
+block title
+        | Gltf loader progress
+block content
+         section
+            pre
+              code.smaller-code(data-trim data-noescape data-line-numbers="11")
+               |    function drawScene() {
+               |       const loader = new GLTFLoader();
+               |       loader.load('./models/dodo/scene.gltf',
+               |            (gltf) => {
+               |                const model = gltf.scene;
+               |                model.position.set(0, 0, -0.3)
+               |                                 .applyMatrix4(controller.matrixWorld);
+               |                model.scale.set(0.01, 0.01, 0.01)
+               |                scene.add(model);
+               |            },
+               |            (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+               |            (e) => console.error(e)
+               |         );
+               |  }
+               |

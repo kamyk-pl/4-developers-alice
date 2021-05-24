@@ -1,0 +1,27 @@
+extends layout-flex.pug
+
+block vars
+  - var title = 'gltf-loader-import'
+
+block title
+        | GLTFLoader import
+block content
+         section
+            pre
+             code(data-trim data-noescape data-line-numbers="6-7")
+               |
+               |     import * as THREE from 'three';
+               |     import {ARButton}
+               |              from './three/examples
+               |                         /jsm/webxr/ARButton.js';
+               |
+               |     import {GLTFLoader} from './three/examples/
+               |                        /jsm/loaders/GLTFLoader.js';
+               |
+               |     let camera, scene, renderer, controller;
+               |
+               |     init();
+               |     animate();
+               |
+               |
+               |
