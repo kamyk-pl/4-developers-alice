@@ -347,7 +347,7 @@ function drawScene() {...}
           </section>
         </div>
       </section>
-      <section id="code-27" data-transition="fade-in">
+      <section id="initialize-scene-and-camera-27" data-transition="fade-in">
         <h2 class="header">initialize scene and camera</h2>
         <div>
           <section>
@@ -378,11 +378,11 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="code-28" data-transition="fade-in">
+      <section id="initialize-renderer-28" data-transition="fade-in">
         <h2 class="header">initialize renderer</h2>
         <div>
           <section>
-            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="8-14">
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="8-12">
 function init() {
  const container = document.createElement('div');
  document.body.appendChild(container);
@@ -409,7 +409,38 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="code-29" data-transition="fade-in">
+      <section id="add-ARButton-29" data-transition="fade-in">
+        <h2 class="header">add ARButton</h2>
+        <div>
+          <section>
+            <pre><code class="smaller-code" data-trim data-noescape data-line-numbers="13">
+function init() {
+ const container = document.createElement('div');
+ document.body.appendChild(container);
+ scene = new THREE.Scene();
+ camera = new THREE.PerspectiveCamera(70, window.innerWidth
+                               / window.innerHeight, 0.01, 20);
+
+ renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+ renderer.setPixelRatio(window.devicePixelRatio);
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.xr.enabled = true;
+ container.appendChild(renderer.domElement);
+ document.body.appendChild(ARButton.createButton(renderer, {}));
+
+ drawScene();
+
+ window.addEventListener('resize', ()=> {
+     camera.aspect = window.innerWidth / window.innerHeight;
+     camera.updateProjectionMatrix();
+     renderer.setSize(window.innerWidth, window.innerHeight);
+ });
+}
+              |</code></pre>
+          </section>
+        </div>
+      </section>
+      <section id="call-drawScene-30" data-transition="fade-in">
         <h2 class="header">call drawScene</h2>
         <div>
           <section>
@@ -440,7 +471,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="code-30" data-transition="fade-in">
+      <section id="resize-handler-31" data-transition="fade-in">
         <h2 class="header">window resize handler</h2>
         <div>
           <section>
@@ -471,7 +502,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="code-31" data-transition="slide">
+      <section id="code-32" data-transition="slide">
         <h2 class="header">Code animate</h2>
         <div class="flex-container">
           <section>
@@ -484,7 +515,7 @@ function animate() {
           </section>
         </div>
       </section>
-      <section id="code-32" data-transition="slide">
+      <section id="code-33" data-transition="slide">
         <h2 class="header">Code render</h2>
         <div class="flex-container">
           <section>
@@ -497,7 +528,7 @@ function animate() {
           </section>
         </div>
       </section>
-      <section id="code-33" data-transition="fade-in">
+      <section id="code-34" data-transition="fade-in">
         <h2 class="header">Code drawScene</h2>
         <div>
           <section>
@@ -524,7 +555,7 @@ function animate() {
           </section>
         </div>
       </section>
-      <section id="code-34" data-transition="fade-in">
+      <section id="code-35" data-transition="fade-in">
         <h2 class="header">Code drawScene</h2>
         <div>
           <section>
@@ -551,7 +582,7 @@ function animate() {
           </section>
         </div>
       </section>
-      <section id="html-35" data-transition="slide">
+      <section id="html-36" data-transition="slide">
         <h2 class="header">Code html</h2>
         <div class="flex-container">
           <section>
@@ -565,7 +596,7 @@ function animate() {
           </section>
         </div>
       </section>
-      <section id="first-three-js-36" data-transition="slide">
+      <section id="first-three-js-37" data-transition="slide">
         <h2 class="header">First Three.js example</h2>
         <div class="flex-container">
           <div>
@@ -576,7 +607,7 @@ function animate() {
           </div>
         </div>
       </section>
-      <section id="add-light-37" data-transition="slide">
+      <section id="add-light-38" data-transition="slide">
         <h2 class="header">add light</h2>
         <div>
           <section>
@@ -606,7 +637,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="use-images-38" data-transition="slide">
+      <section id="use-images-39" data-transition="slide">
         <h2 class="header">Use images</h2>
         <div>
           <section>
@@ -636,7 +667,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="three-js-images-39" data-transition="slide">
+      <section id="three-js-images-40" data-transition="slide">
         <h2 class="header">Three.js example with images</h2>
         <div class="flex-container">
           <div>
@@ -647,7 +678,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="add-controller-40" data-transition="slide">
+      <section id="add-controller-41" data-transition="slide">
         <h2 class="header">add controller</h2>
         <div>
           <section>
@@ -667,7 +698,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="add-onSelect-41" data-transition="slide">
+      <section id="add-onSelect-42" data-transition="slide">
         <h2 class="header">add onSelect</h2>
         <div>
           <section>
@@ -692,7 +723,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="use-controler-position-42" data-transition="slide">
+      <section id="use-controler-position-43" data-transition="slide">
         <h2 class="header">Use images</h2>
         <div>
           <section>
@@ -722,7 +753,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="three-js-images-43" data-transition="slide">
+      <section id="three-js-images-44" data-transition="slide">
         <h2 class="header">Three.js example with interaction</h2>
         <div class="flex-container">
           <div>
@@ -733,7 +764,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="cubes-array-44" data-transition="slide">
+      <section id="cubes-array-45" data-transition="slide">
         <h2 class="header">cubes arrays</h2>
         <div class="flex-container">
           <section>
@@ -754,7 +785,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="use-controler-position-45" data-transition="slide">
+      <section id="use-controler-position-46" data-transition="slide">
         <h2 class="header">Use images</h2>
         <div>
           <section>
@@ -785,7 +816,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="code-46" data-transition="slide">
+      <section id="code-47" data-transition="slide">
         <h2 class="header">Code render</h2>
         <div class="flex-container">
           <section>
@@ -811,7 +842,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="three-js-images-47" data-transition="slide">
+      <section id="three-js-images-48" data-transition="slide">
         <h2 class="header">Three.js example with animation</h2>
         <div class="flex-container">
           <div>
@@ -822,7 +853,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="video html-48" data-transition="slide">
+      <section id="video html-49" data-transition="slide">
         <h2 class="header">Video html element</h2>
         <div class="flex-container">
           <section>
@@ -845,7 +876,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="use-controler-position-49" data-transition="slide">
+      <section id="use-controler-position-50" data-transition="slide">
         <h2 class="header">Use video</h2>
         <div>
           <section>
@@ -876,7 +907,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="three-js-images-50" data-transition="slide">
+      <section id="three-js-images-51" data-transition="slide">
         <h2 class="header">Three.js example with video</h2>
         <div class="flex-container">
           <div>
@@ -887,7 +918,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="gltf-loader-import-51" data-transition="slide">
+      <section id="gltf-loader-import-52" data-transition="slide">
         <h2 class="header">GLTFLoader import</h2>
         <div class="flex-container">
           <section>
@@ -910,7 +941,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="onSelect-52" data-transition="slide">
+      <section id="onSelect-53" data-transition="slide">
         <h2 class="header">onSelect</h2>
         <div>
           <section>
@@ -935,7 +966,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="gltf-loader-53" data-transition="fade-in">
+      <section id="gltf-loader-54" data-transition="fade-in">
         <h2 class="header">Gltf loader</h2>
         <div>
           <section>
@@ -957,7 +988,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="gltf-loader-success-54" data-transition="fade-in">
+      <section id="gltf-loader-success-55" data-transition="fade-in">
         <h2 class="header">Gltf loader success</h2>
         <div>
           <section>
@@ -979,7 +1010,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="gltf-loader-progress-55" data-transition="fade-in">
+      <section id="gltf-loader-progress-56" data-transition="fade-in">
         <h2 class="header">Gltf loader progress</h2>
         <div>
           <section>
@@ -1001,7 +1032,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="gltf-loader-failure-56" data-transition="fade-in">
+      <section id="gltf-loader-failure-57" data-transition="fade-in">
         <h2 class="header">Gltf loader failure</h2>
         <div>
           <section>
@@ -1023,7 +1054,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="three-js-model-57" data-transition="slide">
+      <section id="three-js-model-58" data-transition="slide">
         <h2 class="header">Three.js model</h2>
         <div class="flex-container">
           <div>
@@ -1034,7 +1065,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="mixer-clock-58" data-transition="slide">
+      <section id="mixer-clock-59" data-transition="slide">
         <h2 class="header">mixer and clock</h2>
         <div class="flex-container">
           <section>
@@ -1058,7 +1089,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="clock-59" data-transition="slide">
+      <section id="clock-60" data-transition="slide">
         <h2 class="header">clock</h2>
         <div>
           <section>
@@ -1085,7 +1116,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="mixer-update-60" data-transition="slide">
+      <section id="mixer-update-61" data-transition="slide">
         <h2 class="header">mixer update</h2>
         <div class="flex-container">
           <section>
@@ -1102,7 +1133,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="play-animation-61" data-transition="slide">
+      <section id="play-animation-62" data-transition="slide">
         <h2 class="header">play-animation</h2>
         <div>
           <section>
@@ -1128,7 +1159,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="three-js-model-animation-62" data-transition="slide">
+      <section id="three-js-model-animation-63" data-transition="slide">
         <h2 class="header">Three.js model animation</h2>
         <div class="flex-container">
           <div>
@@ -1139,7 +1170,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="reticle-63" data-transition="slide">
+      <section id="reticle-64" data-transition="slide">
         <h2 class="header">reticle</h2>
         <div class="flex-container">
           <section>
@@ -1166,7 +1197,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="request hit-test-64" data-transition="fade-in">
+      <section id="request hit-test-65" data-transition="fade-in">
         <h2 class="header">request hit-test</h2>
         <div>
           <section>
@@ -1195,7 +1226,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="build-rectile-65" data-transition="fade-in">
+      <section id="build-rectile-66" data-transition="fade-in">
         <h2 class="header">build rectile</h2>
         <div>
           <section>
@@ -1224,7 +1255,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="only-if-reticle.visible-66" data-transition="fade-in">
+      <section id="only-if-reticle.visible-67" data-transition="fade-in">
         <h2 class="header">only if reticle.visible</h2>
         <div>
           <section>
@@ -1253,7 +1284,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="requestr-eferenceSpace-67" data-transition="fade-in">
+      <section id="requestr-eferenceSpace-68" data-transition="fade-in">
         <h2 class="header">request ReferenceSpace</h2>
         <div class="flex-container">
           <section>
@@ -1285,7 +1316,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="reticle-visibility-68" data-transition="fade-in">
+      <section id="reticle-visibility-69" data-transition="fade-in">
         <h2 class="header">reticle visibility</h2>
         <div class="flex-container">
           <section>
@@ -1311,7 +1342,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="three-js-surface-69" data-transition="slide">
+      <section id="three-js-surface-70" data-transition="slide">
         <h2 class="header">Three.js surface detection</h2>
         <div class="flex-container">
           <div>
@@ -1322,11 +1353,11 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="model-viewer-70" data-transition="slide">
+      <section id="model-viewer-71" data-transition="slide">
         <h2 class="header">Model Viewer</h2>
         <div class="flex-container"><a href="https://modelviewer.dev/"><img src="img/model-viewer.jpg" alt="Three js logo" style="max-width: 750px;"></a></div>
       </section>
-      <section id="model-viewer-import-71" data-transition="fade-in">
+      <section id="model-viewer-import-72" data-transition="fade-in">
         <h2 class="header">model viewer import</h2>
         <div>
           <section>
@@ -1356,7 +1387,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="model-viewer-usage-72" data-transition="fade-in">
+      <section id="model-viewer-usage-73" data-transition="fade-in">
         <h2 class="header">model viewer usage</h2>
         <div>
           <section>
@@ -1385,7 +1416,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="model-viewer-usage-73" data-transition="slide">
+      <section id="model-viewer-usage-74" data-transition="slide">
         <h2 class="header">model viewer usage</h2>
         <div>
           <section>
@@ -1404,7 +1435,7 @@ function init() {
           </section>
         </div>
       </section>
-      <section id="model-viewer-74" data-transition="slide">
+      <section id="model-viewer-75" data-transition="slide">
         <h2 class="header">Model Viewer</h2>
         <div class="flex-container">
           <div>
@@ -1415,7 +1446,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="alice-75" data-transition="slide">
+      <section id="alice-76" data-transition="slide">
         <h2 class="header">Alice</h2>
         <div class="flex-container">
           <div>
@@ -1426,7 +1457,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="vs-native-pros-76" data-transition="slide">
+      <section id="vs-native-pros-77" data-transition="slide">
         <h2 class="header">web vs native apps</h2>
         <div>
           <h2>pros</h2>
@@ -1441,7 +1472,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="vs-native-pros-77" data-transition="slide">
+      <section id="vs-native-pros-78" data-transition="slide">
         <h2 class="header">web vs native apps</h2>
         <div>
           <h2>pros</h2>
@@ -1454,7 +1485,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="vs-native-cons-78" data-transition="slide">
+      <section id="vs-native-cons-79" data-transition="slide">
         <h2 class="header">web vs native apps</h2>
         <div>
           <h2>cons</h2>
@@ -1468,7 +1499,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="challenges-lack-79" data-transition="slide">
+      <section id="challenges-lack-80" data-transition="slide">
         <h2 class="header">Challenges</h2>
         <div>
           <div class="flex">
@@ -1484,7 +1515,7 @@ function init() {
           </div>
         </div>
       </section>
-      <section id="challenges-size-80" data-transition="slide">
+      <section id="challenges-size-81" data-transition="slide">
         <h2 class="header">Challenges</h2>
         <div>
           <div class="flex">
@@ -1499,11 +1530,11 @@ function init() {
           </div>
         </div>
       </section>
-      <section class="center" id="play-81" data-transition="slide">
+      <section class="center" id="play-82" data-transition="slide">
         <h2 class="header">Try that at home</h2>
         <div><img src="img/1book28.jpg" alt="why" style="max-width: 750px;"></div>
       </section>
-      <section id="Chess-82" data-transition="slide">
+      <section id="Chess-83" data-transition="slide">
         <h2 class="header">Chess</h2>
         <div class="flex-container">
           <div>

@@ -1,15 +1,15 @@
 extends layout.pug
 
 block vars
-  - var title = 'code'
+  - var title = 'add-ARButton'
   - var transition= "fade-in"
 
 block title
-        | call drawScene
+        | add ARButton
 block content
          section
             pre
-             code.smaller-code(data-trim data-noescape data-line-numbers="15" )
+             code.smaller-code(data-trim data-noescape data-line-numbers="13" )
                |
                | function init() {
                |  const container = document.createElement('div');
